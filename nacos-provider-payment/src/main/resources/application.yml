@@ -1,0 +1,35 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: nacos-payment-provider
+  datasource:
+    # 当前数据源操作类型
+    type: com.alibaba.druid.pool.DruidDataSource
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud2020?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 159357asd
+  cloud:
+    nacos:
+      discovery:
+        #配置Nacos地址
+        server-addr: localhost:8848
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted  #全局逻辑删除字段值 3.3.0开始支持
+      logic-delete-value: 1         # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0     # 逻辑未删除值(默认为 0)
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰命名规则的转换
+    call-setters-on-nulls: true # 如果查询结果中包含空值的列，则 mybatis 在映射的时候，不会映射这个字段
+    cache-enabled: true # 开启二级缓存
