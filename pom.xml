@@ -11,6 +11,7 @@
         <module>nacos-consumer-order</module>
         <module>nacos-provider-payment</module>
         <module>cloud-api-commons</module>
+        <module>nacos-config-client</module>
     </modules>
     <packaging>pom</packaging>
 
