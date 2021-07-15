@@ -12,6 +12,7 @@
         <module>nacos-provider-payment</module>
         <module>cloud-api-commons</module>
         <module>nacos-config-client</module>
+        <module>sentinel-service</module>
     </modules>
     <packaging>pom</packaging>
 

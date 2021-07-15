@@ -12,6 +12,11 @@
     <artifactId>nacos-provider-payment</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>cn.duktig</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!--SpringCloud ailibaba nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>

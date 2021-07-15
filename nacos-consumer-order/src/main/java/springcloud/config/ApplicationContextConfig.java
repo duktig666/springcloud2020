@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * description:
+ * description:应用上下文配置
  *
  * @author RenShiWei
  * Date: 2021/7/6 21:48
