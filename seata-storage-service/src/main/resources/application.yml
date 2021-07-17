@@ -1,14 +1,15 @@
 server:
-  port: 9001
+  port: 2002
+
 spring:
   application:
-    name: nacos-payment-provider
+    name: seata-storage-service
   datasource:
     # 当前数据源操作类型
     type: com.alibaba.druid.pool.DruidDataSource
     # mysql驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloud2020?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://localhost:3306/seata_storage?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: 159357asd
   cloud:
@@ -17,11 +18,21 @@ spring:
         #配置Nacos地址
         server-addr: localhost:8848
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+feign:
+  hystrix:
+    enabled: false
+logging:
+  level:
+    io:
+      seata: info
+
+seata:
+  enabled: true
+  tx-service-group: seata-mall # 事务群组（可以每个应用独立取名，也可以使用相同的名字）
+  service:
+    vgroup-mapping:  # TC 集群（必须与seata-server保持一致）
+      seata-mall: default
+    disable-global-transaction: false # 禁用全局事务（默认false）
 
 mybatis-plus:
   global-config:

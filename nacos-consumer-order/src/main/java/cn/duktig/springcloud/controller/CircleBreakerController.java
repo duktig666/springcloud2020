@@ -1,4 +1,4 @@
-package springcloud.controller;
+package cn.duktig.springcloud.controller;
 
 import cn.duktig.springcloud.entity.Payment;
 import cn.duktig.springcloud.vo.CommonResult;

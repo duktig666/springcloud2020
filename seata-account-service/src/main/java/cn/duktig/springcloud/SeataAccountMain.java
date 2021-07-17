@@ -1,24 +1,27 @@
-package springcloud;
+package cn.duktig.springcloud;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-
 /**
- * 支付模块启动类
- * EnableDiscoveryClient 开启服务发现
- * EnableFeignClients 启动openFeign
+ * description:取消数据源的自动配置
  *
  * @author RenShiWei
- * @date 2020/2/17 21:13
+ * Date: 2021/7/17 11:28
  **/
+@MapperScan({
+        "cn.duktig.springcloud.mapper",
+})
 @EnableDiscoveryClient
-@SpringBootApplication
 @EnableFeignClients
-public class NacosConsumerOrderMain {
+@SpringBootApplication
+public class SeataAccountMain {
     public static void main(String[] args) {
-        SpringApplication.run(NacosConsumerOrderMain.class, args);
+        SpringApplication.run(SeataAccountMain.class, args);
     }
+
 }
+

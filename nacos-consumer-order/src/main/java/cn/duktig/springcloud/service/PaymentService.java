@@ -1,11 +1,11 @@
-package springcloud.service;
+package cn.duktig.springcloud.service;
 
 import cn.duktig.springcloud.entity.Payment;
 import cn.duktig.springcloud.vo.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import springcloud.service.fallback.PaymentFallbackServiceImpl;
+import cn.duktig.springcloud.service.fallback.PaymentFallbackServiceImpl;
 
 /**
  * description:

@@ -1,4 +1,4 @@
-package springcloud.controller;
+package cn.duktig.springcloud.controller;
 
 import cn.duktig.springcloud.entity.Payment;
 import cn.duktig.springcloud.vo.CommonResult;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-import springcloud.service.PaymentService;
+import cn.duktig.springcloud.service.PaymentService;
 
 import javax.annotation.Resource;
 

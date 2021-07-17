@@ -1,9 +1,9 @@
-package springcloud.service.fallback;
+package cn.duktig.springcloud.service.fallback;
 
 import cn.duktig.springcloud.entity.Payment;
 import cn.duktig.springcloud.vo.CommonResult;
 import org.springframework.stereotype.Component;
-import springcloud.service.PaymentService;
+import cn.duktig.springcloud.service.PaymentService;
 
 /**
  * description:
